@@ -1,0 +1,62 @@
+
+---
+
+### Diagrama de Flujo
+
+Aquí tienes un diagrama de flujo representando las interacciones y funciones principales de la herramienta. Este diagrama ilustra el flujo de trabajo general de la herramienta desde la autenticación del usuario hasta la ejecución de las diversas funciones.
+
+```plaintext
+                            +---------------------------+
+                            |   Iniciar Herramienta     |
+                            +---------------------------+
+                                       |
+                                       v
+                            +---------------------------+
+                            |   Autenticación (Contraseña)|
+                            +---------------------------+
+                                       |
+                            +-------------------------+   No Autenticado
+                            |   Autenticación Exitosa  |<------------------------+
+                            +-------------------------+                         |
+                                       |                                      |
+                                       v                                      |
+                            +---------------------------+                     |
+                            |   Menú Principal           |                     |
+                            +---------------------------+                     |
+                                       |                                      |
+             +-------------------------+------------------------+          |
+             |                         |                        |          |
+             v                         v                        v          |
++---------------------+     +---------------------+      +---------------------+
+| Cracking de Hashes  |     | Cifrado/Descifrado   |      | Generación RSA      |
++---------------------+     +---------------------+      +---------------------+
+             |                         |                        |          |
+             v                         v                        v          |
++------------------------+      +----------------------+      +-------------------+
+| Fuerza Bruta / Diccionario|      | AES-256 / ChaCha20  |      | Claves RSA 4096   |
++------------------------+      +----------------------+      +-------------------+
+
+
+
+
+
+
+
+Explicación de Funcionalidades y Crecimiento
+Autenticación:
+
+El usuario ingresa la contraseña y el código OTP. Si ambas verificaciones son correctas, se le otorga acceso a la herramienta.
+Cracking de Hashes:
+
+La herramienta detecta el tipo de hash (MD5, SHA-1, SHA-256) y permite realizar un ataque de fuerza bruta o utilizar un diccionario predefinido para romper el hash.
+Cifrado/Descifrado:
+
+Utiliza AES-256 y ChaCha20-Poly1305 para proteger datos sensibles. Es ideal para proteger contraseñas o datos críticos durante pruebas de penetración.
+Generación de Claves RSA:
+
+Se generan claves RSA de 4096 bits para asegurar la transmisión de datos sensibles entre dos partes (por ejemplo, para cifrar la comunicación).
+Expansión y Uso Comercial:
+
+Captación de Patrocinadores: Al ser un proyecto open source, puede atraer patrocinadores interesados en la seguridad informática, ya sea mediante donaciones o suscripciones para acceder a funciones avanzadas.
+Comercialización: Se puede agregar una capa premium para empresas, ofreciendo características como auditorías personalizadas, reportes detallados o una interfaz gráfica más amigable.
+Crecimiento de la Comunidad: La integración de más algoritmos de cifrado, soporte para más tipos de hash y una comunidad activa contribuirán a su expansión en el sector de ciberseguridad.
