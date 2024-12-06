@@ -42,7 +42,7 @@ Esta herramienta es un conjunto de utilidades diseñadas para Bug Hunters y prof
 1. **Clona el repositorio**:
 
    ```bash
-   git clone https://github.com/tu_usuario/herramienta-de-seguridad.git
+   git clone https://github.com/RAXOR84/experimental/herramienta-de-seguridad.git
    cd herramienta-de-seguridad
 
 
