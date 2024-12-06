@@ -1,0 +1,23 @@
+[filter "lfs"]
+        required = true
+        clean = git-lfs clean -- %f
+        smudge = git-lfs smudge -- %f
+        process = git-lfs filter-process
+[user]
+        name = daxter
+        email = nyaka_mr@hotmail.com
+[core]
+        editor = code --wait
+        repositoryformatversion = 0
+        filemode = true
+        bare = false
+        logallrefupdates = true
+        autocrlf = true  # Maneja finales de lÃ­nea
+        symlinks = false  # Si se permiten enlaces simbÃ³licos
+
+[remote "origin"]
+        url = https://github.com/RAXOR84/REPOSITORY.git
+        fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+        remote = origin
+        merge = refs/heads/main
