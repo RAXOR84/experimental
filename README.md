@@ -1,65 +1,73 @@
-# experimental
-Toolz
+# Herramienta de Seguridad Open Source para Bug Hunters
+
+Esta herramienta es un conjunto de utilidades diseñadas para Bug Hunters y profesionales de la ciberseguridad, permitiendo el análisis, cracking de hashes, cifrado, y otras funcionalidades para pruebas de penetración y auditoría. El proyecto es open source, lo que permite su personalización y expansión para la captura de patrocinadores en el mercado comercial.
+
+## Funcionalidades Principales
+
+1. **Autenticación de Usuario**:  
+   Utiliza autenticación de doble factor (contraseña + OTP) para asegurar el acceso.
+
+2. **Cracking de Hashes**:
+   - Detecta hashes MD5, SHA-1, SHA-256 y SHA-512.
+   - Realiza ataques de fuerza bruta y cracking utilizando diccionarios preconfigurados.
+
+3. **Cifrado/Descifrado**:
+   - Soporta cifrado/descifrado con AES-256 y ChaCha20-Poly1305.
+  
+4. **Generación de Claves RSA**:
+   - Genera claves RSA de 4096 bits para criptografía asimétrica.
+
+5. **Decodificación de Cadenas**:
+   - Permite la decodificación de Base64, Hexadecimal, URL y ROT13.
+
+6. **Gestión de Hashes Conocidos**:
+   - Proporciona una base de datos interna de hashes comunes, ayudando en la reversión rápida de contraseñas.
+
+## Requisitos
+
+- Python 3.6 o superior
+- Bibliotecas necesarias:
+  - cryptography
+  - subprocess
+  - itertools
+  - hashlib
+  - getpass
+  - re
+  - os
+  - random
+  - codecs
+
+## Instalación
+
+1. **Clona el repositorio**:
+
+   ```bash
+   git clone https://github.com/RAXOR84/experimental/herramienta-de-seguridad.git
+   cd herramienta-de-seguridad
 
 
-Proxy Tester & Vulnerability Analyzer
-Este proyecto es un analizador de proxies y vulnerabilidades diseñado para facilitar la prueba de proxies y la detección de vulnerabilidades en URLs. Ha sido desarrollado por I.A. & RAXOR84 y se clasifica como un proyecto experimental bajo un modelo de negocio open source.
-Modelo de Negocio Open Source
-El proyecto se distribuye bajo una licencia open source, permitiendo a los usuarios:
-Acceder al código fuente: Los usuarios pueden ver, modificar y distribuir el código.
-Colaborar en el desarrollo: Se fomenta la contribución de la comunidad para mejorar el software.
-Utilizar el software sin costo: No hay tarifas asociadas con su uso.
-Políticas de Negocio
-Transparencia: El código y las decisiones de diseño son accesibles para todos.
-Colaboración: Se alienta a los desarrolladores a contribuir con mejoras y correcciones.
-Responsabilidad: Los usuarios son responsables del uso del software en entornos legales y éticos.
-Descripción del Proyecto
-El analizador permite a los usuarios:
-Probar proxies para verificar su funcionalidad.
-Analizar URLs en busca de vulnerabilidades comunes como XSS, SQL Injection, etc.
-Generar estadísticas sobre el rendimiento de los proxies y las vulnerabilidades detectadas.
-Funcionalidades Principales
-Interfaz Gráfica: Utiliza Tkinter para una experiencia de usuario amigable.
-Soporte para Selenium y Beautiful Soup: Permite scraping dinámico y estático.
-Generación de Gráficos: Visualiza estadísticas sobre proxies y vulnerabilidades detectadas.
-Diagramas y Gráficas
-Diagrama de Flujo del Proceso
-text
-graph TD;
-    A[Inicio] --> B{Seleccionar Proxies}
-    B -->|Cargar desde archivo| C[Cargar Proxies]
-    B -->|Ingresar manualmente| D[Probar Proxy]
-    D --> E{Proxy Funciona?}
-    E -->|Sí| F[Registrar Resultado]
-    E -->|No| G[Mostrar Error]
-    F --> H[Probar URL]
-    H --> I{URL Funciona?}
-    I -->|Sí| J[Analizar Vulnerabilidades]
-    I -->|No| K[Mostrar Error]
-    J --> L[Generar Estadísticas]
-    L --> M[Mostrar Gráficos]
-    M --> N[Fin]
+2.
 
-Gráficas Generadas
-Distribución de Resultados de Proxies
-Gráfico circular que muestra la proporción de proxies funcionales vs no funcionales.
-Frecuencia de Vulnerabilidades Detectadas
-Gráfico de barras que ilustra cuántas veces se detectaron diferentes tipos de vulnerabilidades.
-Escalaciones Posibles
+   pip install -r requirements.txt
+
+3.
+  python3 security_tool.py
 
 
-El proyecto puede escalar en varias direcciones:
-Integración con otras herramientas de ciberseguridad: Por ejemplo, sistemas de detección de intrusiones (IDS).
-Mejoras en el análisis automático: Implementar algoritmos más avanzados para la detección de vulnerabilidades.
-Ampliación del soporte para más tipos de proxies y métodos de scraping.
-Probabilidades y Estadísticas
-Se pueden realizar análisis estadísticos sobre la efectividad del software en diferentes escenarios:
-Tasa promedio de éxito al probar proxies (porcentaje que funciona).
-Frecuencia media de detección de vulnerabilidades en diferentes tipos de sitios web (por ejemplo, sitios comerciales vs personales).
+
+Uso
+Autenticación: Inicia sesión con una contraseña y un código OTP (código generado automáticamente).  
+Contraseña: admin123
+Menú Principal: El menú ofrece diversas opciones para cifrar, descifrar, y analizar datos.
+Cracking de Hashes: Utiliza la función de "fuerza bruta" o un diccionario de contraseñas para crackear hashes conocidos.
+Cifrado de Datos: Permite cifrar datos con los algoritmos AES-256 y ChaCha20.
+Generación de Claves RSA: Genera pares de claves RSA de 4096 bits para criptografía asimétrica.
 
 
-Estado Actual del Proyecto
-Este proyecto se encuentra actualmente en desarrollo. Las funcionalidades están siendo mejoradas continuamente, y se espera que futuras versiones incluyan:
-Nuevas técnicas para detectar vulnerabilidades más complejas.
-Optimización del rendimiento del análisis.
-Mejoras en la interfaz gráfica para una experiencia más intuitiva.
+Crecimiento y Uso Comercial
+Este proyecto es ideal para la comunidad open source de ciberseguridad. Su expansión podría incluir:
+
+Mejoras en la base de datos de hashes.
+Adición de más algoritmos de cifrado.
+Inclusión de más métodos de autenticación y mayor seguridad.
+Integración de patrocinadores en el código mediante donaciones o suscripciones premium.
